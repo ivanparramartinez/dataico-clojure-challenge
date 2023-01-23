@@ -11,6 +11,7 @@
     :or                {discount-rate 0}}]
   (* precise-price precise-quantity (discount-factor item)))
 
+;; SOLUTION TO PROBLEM 3
 ;function to define Item with quantity, price and discount rate
 (defn Item [precise-quantity precise-price discount-rate]
   {:invoice-item/precise-quantity precise-quantity
