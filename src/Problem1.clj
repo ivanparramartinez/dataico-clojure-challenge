@@ -25,6 +25,11 @@
                        filter-retention (some #(and (= 1 (:retention/rate %)) (= :ret_fuente (:retention/category %))) (get-in item [:retentionable/retentions]))]
                    (and (or filter-tax filter-retention) (not (and filter-tax filter-retention))))))))
 
+(filter-taxable-items-by-rate invoice)
+(filter-retentionable-items-by-rate invoice)
+(filter-by-tax-and-retention invoice)
+
+;; PRINTING RESULTS
 (println "Items with a tax rate of 19: " (filter-taxable-items-by-rate invoice))
 (println "Items with a retention rate of 1: " (filter-retentionable-items-by-rate invoice))
 (println "Items with a tax rate of 19 or a retention rate of 1, but not both: " (filter-by-tax-and-retention invoice))

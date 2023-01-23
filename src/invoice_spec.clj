@@ -77,9 +77,5 @@
 ;Test the function
 (s/valid? ::invoice (parse-json-invoice "invoice.json"))
 
-
-
-
-
-
-
+;; PRINTING RESULTS
+(print (s/valid? ::invoice (parse-json-invoice "invoice.json")))
