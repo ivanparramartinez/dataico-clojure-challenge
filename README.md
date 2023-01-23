@@ -37,6 +37,9 @@ Given the invoice defined in **invoice.edn** in this repo, use the thread-last -
 - At least have one item that has :iva 19%
 - At least one item has retention :ret\_fuente 1%
 - Every item must satisfy EXACTLY one of the above two conditions. This means that an item cannot have BOTH :iva 19% and retention :ret\_fuente 1%.
+
+### SOLUTION TO THIS PROBLEM IS IN THE PROBLEM1.clj FILE
+
 ## Problem 2: Core Generating Functions
   Given the invoice defined in **invoice.json** found in this repo, generate an invoice that passes the spec **::invoice** defined in **invoice-spec.clj**. Write a function that as an argument receives a file name (a JSON file name in this case) and returns a clojure map such that
 
@@ -45,10 +48,13 @@ Given the invoice defined in **invoice.edn** in this repo, use the thread-last -
 ```
 
 where invoice represents an invoice constructed from the JSON.
+
+### SOLUTION TO THIS PROBLEM IS IN THE invoice_spec.clj FILE
+
 ## Problem 3: Test Driven Development
 Given the function **subtotal** defined in **invoice-item.clj** in this repo, write at least five tests using clojure core **deftest** that demonstrates its correctness. This subtotal function calculates the subtotal of an invoice-item taking a discount-rate into account. Make sure the tests cover as many edge cases as you can!
 
-
+### SOLUTION TO THIS PROBLEM IS IN THE invoice_item.clj FILE
 
 
 
